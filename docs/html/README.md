@@ -26,7 +26,7 @@
    XML 是可扩展标记语言是未来网页语言的发展方向，XML 和 HTML 的最大区别就在于 XML 的标签是<mark>可以自己定义的</mark>，数量无限多，而 HTML 的标签都是固定的而且数量有限。
    
    XHTML 也是现在基本上所有网页都在用的标记语言，他其实和 HTML 没什么本质的区别，标签都一样，用法也都一样，就是<mark>比 HTML 更严格</mark>，比如<mark>标签必须都用小写</mark>，<mark>标签都必须闭合</mark>等。
-## 6. 行内元素有哪些？块级元素有哪些？二者有什么区别？⭐
+## 6. 行内元素有哪些？块级元素有哪些？二者有什么区别？
    [行内元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elements)：a、b、strong、i、em、span、br、img、sub、sup、label、input、button、select、textarea
 
    [块级元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level_elements)：div、p、hr、form、ul、ol、li、table、dl、dd、dt、h1~h6、header、main、footer、article、aside、section、nav
@@ -44,7 +44,7 @@
 空元素的特点：空元素都是<mark>自闭合</mark>的。
 
 常见的空元素有：meta、link、br、hr、img、input
-## 10. link 和 @import 的区别是什么？⭐
+## 10. link 和 @import 的区别是什么？
    （1）功能上的区别：link 是 HTML 提供的标签，不仅可以加载 CSS 文件，还可以定义 RSS、rel 连接属性、引入网站图标等，而 @import 是 CSS 提供的语法规则，只有导入样式表的作用。
 
    （2）加载顺序区别：在加载页面时，link 标签引入的 CSS 会被同时加载，而 @import 引入的 CSS 将在页面加载完毕后被加载。
@@ -53,7 +53,7 @@
 
    （4）DOM 可控性区别：可以通过 JS 操作 DOM ，插入 link 标签来改变样式，而 JS 无法通过操作 @import 来插入样式。
 
-## 11. 说说你对浏览器的理解？⭐
+## 11. 说说你对浏览器的理解？
    浏览器的主要功能是将用户选择的 web 资源呈现出来，它需要从服务器请求资源，并将其显示在浏览器窗口中，资源的格式通常是 HTML，也包括 PDF、image 及其他格式。用户用 URI（Uniform Resource Identifier 统一资源标识符）来指定所请求资源的位置。
 
    HTML 和 CSS 规范中规定了浏览器解释 html 文档的方式，由 W3C 组织对这些规范进行维护，W3C 是负责制定 web 标准的组织。
@@ -61,7 +61,7 @@
    但是浏览器厂商纷纷开发自己的扩展，对规范的遵循并不完善，这为 web 开发者带来了严重的兼容性问题。
 
    简单来说浏览器可以分为两部分——<mark>外壳</mark>和<mark>内核</mark>。其中外壳的种类相对比较多，内核则比较少。外壳主要是提供给用户界面操作，参数设置等，它通过调用内核来实现各种功能。内核是浏览器的核心，它是基于标记语言显示内容的程序或模块，也有一些浏览器并不区分外壳和内核，从 Mozilla 将 Gecko 独立出来后，才有了外壳和内核的明确划分。
-## 12. 说说你对浏览器内核的理解？⭐⭐
+## 12. 说说你对浏览器内核的理解？
    浏览器内核主要包括<mark>渲染引擎</mark>和<mark> JS 引擎</mark>两部分。
 
    渲染引擎的职责就是渲染，即在浏览器窗口中显示所请求的内容。默认情况下，渲染引擎可以显示 html、xml、image，它也可以借助插件显示其他类型数据，例如使用 PDF 阅读器插件，可以显示 PDF 格式。
@@ -69,7 +69,7 @@
    JS 引擎的职责就是解析和执行 JS 来实现网页的动态效果。
 
    最开始渲染引擎和 JS 引擎并没有区分得很明确，后来 JS 引擎越来越独立，内核就倾向于只指渲染引擎。
-## 13. 常见浏览器所用内核都是什么？⭐
+## 13. 常见浏览器所用内核都是什么？
    （1）IE 浏览器：Trident 内核，也是俗称的 IE 内核
 
    （2）Chrome 浏览器：Chrome 内核，以前是 Webkit 内核，现在是 Blink内核
@@ -91,7 +91,7 @@
    （10）2345浏览器：好像以前是 IE 内核，现在也是 IE + Chrome 双内核了
 
    （11）UC 浏览器：这个众口不一，UC 说是他们自己研发的 U3 内核，但好像还是基于 Webkit 和 Trident ，还有说是基于火狐内核
-## 14. 说说浏览器的渲染原理？⭐⭐⭐⭐⭐
+## 14. 说说浏览器的渲染原理？
    （1）构建DOM树：解析收到的文档，根据文档定义构建一棵DOM 树，DOM 树是由 DOM 元素及属性节点组成的。
 
    （2）构建CSSOM树：然后对 CSS 进行解析，生成 CSSOM 树。
@@ -114,7 +114,7 @@
    JS 的加载、解析与执行会阻塞文档的解析，也就是说，在构建 DOM 树时，HTML 解析器若遇到了 JS，那么它会暂停（阻塞）文档的解析，将控制权移交给 JS 引擎，等 JS 引擎运行完毕，浏览器再从中断的地方恢复文档得解析。
 
    也就是说，如果你想首屏渲染的越快，就越不应该在首屏就加载 JS 文件，这也是都建议将 script 标签放在 body 标签底部的原因。当然并不是说 script 标签必须放在底部，我们也可以给 script 标签添加 defer 或者 async 属性。
-## 16. async 和 defer 的作用是什么？二者有什么区别？⭐⭐
+## 16. async 和 defer 的作用是什么？二者有什么区别？
    （1）JS 脚本若没有添加 async 或 defer 属性，那么浏览器会立即加载并执行指定的脚本，也就是说不等待后续载入的文档元素，读到就加载并执行。
 
    （2）async 属性表示异步执行引入的 JS，它与 defer 的区别在于，如果已经加载好，就会开始执行，也就是说它的执行仍然会阻塞文档的解析，只是它的加载过程不会阻塞，多个脚本的执行顺序无法保证。
@@ -124,16 +124,16 @@
    > 详细资料可以参考：
    > [《defer 和 async 的区别》](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 
-## 17. 什么是文档的预解析？⭐
+## 17. 什么是文档的预解析？
    一般情况下，HTML 文档解析时，遇到 JS 脚本就会暂停，等待脚本的下载、执行，这一过程受限于网络环境、脚本大小等。针对这个情况，Chrome 浏览器做了很多优化，其中一个主要的优化是预解析操作。当渲染引擎收到字节流之后，会开启一个预解析线程，用来分析 HTML 文件中包含的 JS、CSS 等相关文件，解析到相关文件之后，预解析线程会提前下载这些文件，这种方式可以使资源并行加载从而使整体速度更快。需要注意的是，预解析并不改变 DOM 树，它将这个工作留给主解析（渲染）过程，自己只解析外部资源的引用，比如外部脚本、样式表及图片等。
 
    > 详细资料可以参考：
    > [《HTML 文档是边加载边解析、预解析》](https://www.jianshu.com/p/3a72f1886206)
-## 18. CSS 如何阻塞文档解析？ ⭐
+## 18. CSS 如何阻塞文档解析？ 
    理论上，既然样式表不改变 DOM 树，也就没有必要停下文档的解析等待它们，然而，存在一个问题，JS 脚本执行时可能会请求样式信息，如果样式还没有加载和解析，脚本将得到错误的值，显然这将会导致很多问题。
 
    所以如果浏览器尚未完成 CSSOM 树的构建，而我们却想在此时运行脚本，那么浏览器将延迟 JS 脚本的执行和文档的解析，直至其完成 CSSOM 的下载和构建。也就是说，在这种情况下，浏览器会先下载和构建 CSSOM 树，然后再执行 JS，最后再继续文档的解析。
-## 19. 渲染页面时常见哪些不良现象？⭐
+## 19. 渲染页面时常见哪些不良现象？
    FOUC：主要指的是样式闪烁的问题，有些浏览器渲染机制（比如 Firefox）在 CSS 加载之前，先呈现了 HTML，就会导致展示出无样式内容，然后样式突然呈现的现象。会出现这个问题的原因主要有三：（1）CSS 加载时间过长（2）CSS 被放在了文档底部（3）使用了 @import 加载 CSS。
 
    白屏：有些浏览器渲染机制（比如 Chrome）要先构建 DOM 树和 CSSOM 树，构建完成后再进行渲染，如果 CSS 部分放在 HTML 尾部，由于 CSS 未加载完成，浏览器迟迟未渲染，从而导致白屏；也可能是把 JS 文件放在头部，JS 脚本的加载会阻塞后面文档内容的解析，从而页面迟迟未渲染出来，出现白屏问题。
@@ -160,7 +160,7 @@
    详细资料可以参考：
    [《优化关键渲染路径》](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path?hl=zh-cn)
 
-## 21. 什么是重绘和重排？⭐⭐⭐⭐⭐
+## 21. 什么是重绘和重排？
    重绘: 当渲染树中的一些元素需要更新属性，而这些属性只是影响元素的<mark>外观</mark>、<mark>风格</mark>，而不会影响到布局，如有关颜色的更新，我们将这样的操作称为重绘。
    
    重排（回流）：当渲染树中的一部分（或全部）因为元素的<mark>位置</mark>、<mark>大小</mark>等改变而需要重新构建并且会影响到布局的操作，这样的操作我们称为重排。
@@ -193,7 +193,7 @@
 
    详细资料可以参考：
    [《浏览器的回流与重绘》](https://juejin.im/post/5a9923e9518825558251c96a)
-## 22. 如何减少重排？⭐⭐⭐
+## 22. 如何减少重排？
    （1）使用 transform 替代 top
 
    （2）不要把节点的属性值放在一个循环里当成循环里的变量
@@ -203,17 +203,17 @@
    （4）把 DOM 离线后修改。如：使用 documentFragment 对象在内存里操作 DOM
 
    （5）不要一条一条地修改 DOM 的样式。与其这样，还不如预先定义好 CSS 的 class，然后修改 DOM 的 className
-## 23. 为什么操作 DOM 慢？⭐⭐
+## 23. 为什么操作 DOM 慢？
    一些 DOM 的操作或者属性访问可能会引起页面的重排和重绘，从而引起性能上的消耗。
 
-## 24. DOMContentLoaded 事件和 Load 事件的区别？⭐
+## 24. DOMContentLoaded 事件和 Load 事件的区别？
    DOMContentLoaded 事件只要在页面 DOM 加载完成后就触发，而无需等待依赖资源的完全加载。
 
    load 事件是当所有依赖资源全部加载完成后才被触发，即<mark> DOMContentLoaded 事件发生于 load 事件之前</mark>。
 
    > 详细资料可以参考：
    > [《DOMContentLoaded 事件 和 Load 事件的区别？》](https://www.jianshu.com/p/ca8dae435a2c)
-## 25. 简述一下你对 HTML5 语义化的理解？⭐⭐⭐⭐⭐
+## 25. 简述一下你对 HTML5 语义化的理解？
    HTML5 新增的语义化元素有：header、foote、main、article、section、nav
 
    对于 HTML5 语义化的理解：
@@ -232,7 +232,7 @@
    > [《语义化的 HTML 结构到底有什么好处？》](https://www.html.cn/archives/1668)
    > [《如何理解 Web 语义化？》](https://www.zhihu.com/question/20455165)
    > [《我的 HTML 会说话——从实用出发，谈谈 HTML 的语义化》](https://juejin.im/post/5a9c8866f265da23741072bf#heading-5)
-## 26. 前端如何提高SEO ？⭐⭐⭐⭐⭐
+## 26. 前端如何提高SEO ？
    （1）合理地设置title、description、keywords：搜索引擎对这三项的权重逐个减小，title 值强调重点即可，重要关键词出现不要超过2次，而且要靠前，不同页面 title 要有所不同；description 把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面 description 有所不同；keywords 列举出重要关键词即可
 
    （2）采用语义化的 HTML 代码：语义化代码让搜索引擎容易理解网页
@@ -246,7 +246,7 @@
    （6）非装饰性图片必须加 alt
 
    （7）提高网站速度：网站速度是搜索引擎排序的一个重要指标
-## 27. 常见的浏览器端的存储技术有哪些？⭐⭐⭐
+## 27. 常见的浏览器端的存储技术有哪些？
 
    浏览器常见的存储技术有 cookie、localStorage 和 sessionStorage。
 
@@ -257,7 +257,7 @@
    > 详细的资料可以参考：
    > [《很全很全的前端本地存储讲解》](https://segmentfault.com/a/1190000012578794#articleHeader0)
 
-## 28. 请描述一下 cookies，sessionStorage 和 localStorage 的区别？⭐⭐⭐⭐⭐
+## 28. 请描述一下 cookies，sessionStorage 和 localStorage 的区别？
 
    SessionStorage， LocalStorage， Cookie 这三者都可以被用来在浏览器端存储数据，而且都是字符串类型的键值对。区别在于前两者属于 HTML5 WebStorage，创建它们的目的便于客户端存储数据。而 cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密）。cookie 数据始终在同源（协议、主机、端口相同）的 http 请求中携带（即使不需要），会在浏览器和服务器间来回传递。
     
@@ -320,7 +320,7 @@
 
    autocomplete 属性适用于 form，以及其下面的 input 类型：text、search、url、telephone、email、password、date, range、color。
 
-## 32. 如何实现浏览器内多个标签页之间的通信？⭐⭐⭐⭐
+## 32. 如何实现浏览器内多个标签页之间的通信？
    实现多个标签页之间的通信，本质上都是通过中介者模式来实现的，因为标签页之间没有办法直接通信，因此我们可以找一个中介者，让标签页和中介者进行通信，然后让这个中介者来进行消息的转发。
 
    具体的实现方法有：
@@ -340,7 +340,7 @@
    > [《使用 Web Storage API》](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
    > [《JavaScript 的多线程，Worker 和 SharedWorker》](https://www.zhuwenlong.com/blog/article/590ea64fe55f0f385f9a12e5)
    > [《实现多个标签页之间通信的几种方法》](https://juejin.im/post/5acdba01f265da23826e5633#heading-1)
-## 33. 页面可见性（Page Visibility API） 有什么作用？⭐
+## 33. 页面可见性（Page Visibility API） 有什么作用？
    这个新的 API 的意义在于，通过监听网页的可见性，可以预判网页的卸载，还可以用来节省资源，减缓电能的消耗。比如，一旦用户不看网页，下面这些网页行为都是可以暂停的：
 
    （1）对服务器的轮询
@@ -357,7 +357,7 @@
 
    > 详细资料可以参考：
    > [《Page Visibility API 教程》](http://www.ruanyifeng.com/blog/2018/10/page_visibility_api.html)
-## 34. Canvas 和 SVG 有什么区别？⭐
+## 34. Canvas 和 SVG 有什么区别？
    Canvas 是一种通过 JS 来绘制 2D 图形的方法。Canvas 是<mark>逐像素</mark>来进行渲染的，因此当我们对 Canvas 进行缩放时，会出现<mark>失真</mark>的情况。
     
    SVG 是一种使用<mark> XML </mark>描述 2D 图形的语言。SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。我们可以为某个元素附加 JavaScript 事件监听函数。并且 SVG 保存的是图形的绘制方法，因此当 SVG 图形缩放时并<mark>不会失真</mark>。
@@ -376,7 +376,7 @@
    可访问性（Accessibility）：Web 内容对于残障用户的可阅读和可理解性
 
    可维护性（Maintainability）：一般包含两个层次，一是当系统出现问题时，快速定位并解决问题的成本，成本低则可维护性好。二是代码是否容易被人理解，是否容易修改和增强功能。
-## 37. 浏览器架构解析？⭐⭐⭐
+## 37. 浏览器架构解析？
    ![alt 浏览器架构](https://s3.bmp.ovh/imgs/2022/08/14/ef6d03ef6ef4497e.png)
 ## 38. 在 HTML5 中，哪个方法用于获得用户的当前位置？
    ``` javascript
@@ -400,7 +400,7 @@
    opera   内核 （opera 浏览器）：-o
 
    trident 内核 （ie 浏览器）：-ms
-## 41. 前端性能优化方法有哪些？⭐⭐⭐⭐⭐
+## 41. 前端性能优化方法有哪些？
    <mark>在内容方面：</mark>
 
    （1）通过文件合并、css 雪碧图、使用 base64 等方式来减少 HTTP 请求数，避免过多的请求造成等待的情况。
