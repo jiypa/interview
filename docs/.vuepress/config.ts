@@ -54,11 +54,11 @@ export default defineUserConfig({
                 children: ['/css/README.md'],
             }],
             '/js/': [{
-                text: 'JS',
+                text: 'JavaScript',
                 children: ['/js/README.md'],
             }],
             '/ts/': [{
-                text: 'TS',
+                text: 'TypeScript',
                 children: ['/ts/README.md'],
             }],
             '/vue/': [{
