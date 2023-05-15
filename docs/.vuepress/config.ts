@@ -5,7 +5,6 @@ export default defineUserConfig({
     lang: 'zh-CN',
     title: '前端面试宝典',
     description: '全网最全前端面试题总结',
-    dest: './dist',
     head: [
         ['link', { rel: 'icon', href: '/logo.png' }],
     ],
