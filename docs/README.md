@@ -11,7 +11,7 @@ actions:
     type: secondary
 features:
   - title: 易于使用
-    details: 面试宝典采用 VuePress 搭建，面试者可以通过网站顶部导航栏轻松找到对应题库，快速浏览面试题
+    details: 面试宝典采用 VuePress v2 搭建，面试者可以通过网站顶部导航栏轻松找到对应题库，快速浏览面试题
   - title: 题目广泛
     details: 面试宝典共包含基础、框架、工具、网络、算法五大模块，1000+ 道面试题助力面试者攻克前端各种疑难杂症
   - title: 答案准确
