@@ -10,7 +10,7 @@ export default defineUserConfig({
     ],
     theme: defaultTheme({
         logo: '/logo.png',
-        repo: 'jyp0426/interview',
+        repo: 'jiypa/interview',
         navbar: [
             {
                 text: '基础',
@@ -42,6 +42,16 @@ export default defineUserConfig({
             {
                 text: '算法',
                 link: '/algorithm/',
+            },
+            {
+                text: '友链',
+                children: [
+                    { text: '前端学习路线', link: 'https://objtube.github.io/front-end-roadmap/' },
+                    { text: 'web前端面试', link: 'https://vue3js.cn/interview/' },
+                    { text: '前端那些事儿', link: 'https://jonny-wei.github.io/blog/' },
+                    { text: '被删的前端游乐场', link: 'http://www.godbasin.com/' },
+                    { text: 'WindrunnerMax', link: 'https://blog.touchczy.top/' },
+                ],
             },
         ],
         sidebar: {
