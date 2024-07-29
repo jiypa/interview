@@ -1,5 +1,7 @@
 .idea/
+.vscode/
 .vercel/
 docs/.vuepress/.temp/
 docs/.vuepress/.cache/
+docs/.vuepress/dist/
 node_modules/
