@@ -4,7 +4,7 @@ heroImage: /logo.png
 heroHeight: 200
 actions:
   - text: 开始阅读
-    link: /html/
+    link: /basics/html/
     type: primary
   - text: 关于作者
     link: https://github.com/jiypa

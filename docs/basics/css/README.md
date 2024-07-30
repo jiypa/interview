@@ -1,4 +1,4 @@
-# 面试题典
+# CSS
 
 ## 1.介绍一下 CSS 盒模型？⭐⭐⭐⭐⭐
   盒模型分为两种：IE盒模型（border-box）、W3C标准盒模型（content-box）
