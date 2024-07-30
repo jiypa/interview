@@ -94,7 +94,7 @@ export default defineUserConfig({
         // page meta
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdatedText: '上次更新',
-        contributorsText: '贡献者',
+        contributors: false,
         // custom containers
         tip: '提示',
         warning: '注意',
