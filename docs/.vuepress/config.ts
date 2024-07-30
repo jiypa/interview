@@ -12,6 +12,7 @@ export default defineUserConfig({
     theme: defaultTheme({
         logo: '/logo.png',
         repo: 'jiypa/interview',
+        docsDir: 'docs',
         navbar: [
             {
                 text: '基础',
