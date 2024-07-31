@@ -7,7 +7,7 @@ export default defineUserConfig({
     title: '前端面试宝典',
     description: '全网最全前端面试题总结',
     head: [
-        ['link', { rel: 'icon', href: '/images/logo.png' }],
+        ['link', { rel: 'icon', href: '/images/favicon.ico' }],
     ],
     theme: defaultTheme({
         logo: '/images/logo.png',
