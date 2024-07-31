@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="docs/.vuepress/public/images/logo.png" alt="前端面试宝典">
+    <img src="./docs/.vuepress/public/images/logo.png" alt="前端面试宝典">
 </p>
 <h1 align="center">
     前端面试宝典
@@ -29,7 +29,7 @@
 
 ## 🖥 项目截图
 
-![前端面试宝典](docs/.vuepress/public/images/screenshot.png)
+![前端面试宝典](./docs/.vuepress/public/images/screenshot.png)
 
 ## 🚀 项目运行
 
