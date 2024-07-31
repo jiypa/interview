@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /images/logo.png
 heroHeight: 200
 actions:
   - text: 开始阅读
