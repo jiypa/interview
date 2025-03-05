@@ -1,26 +1,28 @@
 {
   "name": "interview",
+  "type": "module",
   "version": "1.0.0",
-  "description": "前端面试宝典",
-  "main": "index.js",
+  "description": "全网最全前端面试题总结",
+  "packageManager": "pnpm@10.5.2",
+  "author": "jiypa <3394521327@qq.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "^18.20.0 || >=20.0.0"
+  },
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
+    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:preview": "http-server docs/.vuepress/dist",
+    "vp-update": "pnpm dlx vp-update"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jiypa/interview.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jiypa/interview/issues"
-  },
-  "homepage": "https://github.com/jiypa/interview#readme",
   "devDependencies": {
-    "@vuepress/plugin-search": "^2.0.0-beta.62",
-    "vuepress": "^2.0.0-beta.62"
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "vuepress": "2.0.0-rc.20",
+    "vuepress-theme-plume": "1.0.0-rc.135",
+    "http-server": "^14.1.1",
+    "vue": "^3.5.13",
+    "sass-embedded": "^1.85.1",
+    "typescript": "^5.7.3"
   }
 }
