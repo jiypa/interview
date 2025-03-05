@@ -1,6 +1,3 @@
-<p align="center">
-    <img src="./docs/.vuepress/public/images/logo.png" alt="前端面试宝典">
-</p>
 <h1 align="center">
     前端面试宝典
 </h1>
@@ -29,19 +26,19 @@
 
 ## 🖥 项目截图
 
-![前端面试宝典](./docs/.vuepress/public/images/screenshot.png)
+![前端面试宝典](./docs/.vuepress/public/screenshot.png)
 
 ## 🚀 项目运行
 
 安装依赖：
 ```shell
-npm install
+pnpm install
 ```
 启动项目：
 ```shell
-npm run docs:dev
+pnpm run docs:dev
 ```
 打包项目：
 ```shell
-npm run docs:build
+pnpm run docs:build
 ```
