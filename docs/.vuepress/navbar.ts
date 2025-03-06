@@ -35,6 +35,10 @@ export const navbar = defineNavbarConfig([
     link: '/algorithm/',
   },
   {
+    text: '性能',
+    link: '/performance/',
+  },
+  {
     text: '友链',
     items: [
       { text: '前端学习路线', link: 'https://objtube.github.io/front-end-roadmap/' },
