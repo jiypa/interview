@@ -72,7 +72,7 @@ function initProps(vm: Component, propsOptions: Object) {
 
 Father.vue
 
-```js
+```js{8}
 <template>
 	<div>
 		<div class="wrapper">
@@ -118,7 +118,7 @@ export default {
 
 Child.vue
 
-```js
+```js{6-7,20-26}
 <template>
 	<div class="wrapper">
 		<h2>子组件</h2>
@@ -183,6 +183,119 @@ button:disabled {
 点击 changeObj 按钮后运行结果如下：
 
 ![changeObj](../../.vuepress/public/frameworks/vue/changeObj.png)
+
+### 正确写法
+
+Father.vue
+
+```js{8-13}
+<template>
+	<div>
+		<div class="wrapper">
+			<h2>父组件</h2>
+			<p>msg: {{ msg }}</p>
+			<p>obj: {{ obj }}</p>
+		</div>
+		<Child
+            :msg="msg"
+            :obj="obj"
+            @changeMsg="m => msg = m"
+            @changeObj="o => obj = o"
+        />
+	</div>
+</template>
+
+<script>
+import Child from '@/issues/props/Child.vue';
+
+export default {
+	data() {
+		return {
+			msg: 'Hello World',
+			obj: {
+				foo: 'foo',
+				bar: 'bar',
+			},
+		};
+	},
+	updated() {
+		console.log('Father component updated!');
+	},
+	components: {
+		Child,
+	},
+};
+</script>
+
+<style scoped>
+.wrapper {
+	padding: 0 8px;
+	margin: 8px 0;
+	border-radius: 8px;
+	border: 1px solid #eee;
+}
+</style>
+```
+
+Child.vue
+
+```js{6-7,20-28}
+<template>
+	<div class="wrapper">
+		<h2>子组件</h2>
+		<p>msg: {{ msg }}</p>
+		<p>obj: {{ obj }}</p>
+		<button class="btn" @click="changeMsg">changeMsg</button>
+		<button class="btn" @click="changeObj">changeObj</button>
+	</div>
+</template>
+
+<script>
+export default {
+	props: ['msg', 'obj'],
+    updated() {
+        console.log('Child component updated!');
+        console.log('propsData', this.$options.propsData);
+        console.log('_props', this._props);
+    },
+	methods: {
+		changeMsg() {
+			this.$emit('changeMsg', 'Hello Vue');
+		},
+		changeObj() {
+            this.$emit('changeObj', {
+                foo: 'bar',
+                bar: 'foo',
+            });
+		},
+	},
+};
+</script>
+
+<style scoped>
+/* https://getbootstrap.com/docs/5.3/components/buttons/ */
+button:not(:disabled) {
+	cursor: pointer;
+}
+button:disabled {
+	cursor: not-allowed;
+}
+.btn {
+	border: 0;
+	padding: 6px 12px;
+	margin: 0 1em 1em 0;
+	color: white;
+	border-radius: 6px;
+	background-color: #212529;
+}
+.btn:hover {
+	background-color: #424649;
+}
+.btn:active {
+	background-color: #4d5154;
+}
+</style>
+```
 
 ::: note 参考资料
 
