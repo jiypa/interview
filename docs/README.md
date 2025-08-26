@@ -14,7 +14,7 @@ config:
         -
           theme: brand
           text: 开始阅读 →
-          link: /basis/html/
+          link: /bases/html/
         -
           theme: alt
           text: 关于作者

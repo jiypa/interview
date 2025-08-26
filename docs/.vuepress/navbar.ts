@@ -4,19 +4,19 @@ export const navbar = defineNavbarConfig([
   {
     text: '基础',
     items: [
-      { text: 'HTML', link: '/basis/html/' },
-      { text: 'CSS', link: '/basis/css/' },
-      { text: 'JavaScript', link: '/basis/javascript/' },
-      { text: 'TypeScript', link: '/basis/typescript/' },
-      { text: 'Node.js', link: '/basis/nodejs/' },
-      { text: '浏览器', link: '/basis/browser/' },
+      { text: 'HTML', link: '/bases/html/' },
+      { text: 'CSS', link: '/bases/css/' },
+      { text: 'JavaScript', link: '/bases/javascript/' },
+      { text: 'TypeScript', link: '/bases/typescript/' },
+      { text: 'Node.js', link: '/bases/nodejs/' },
+      { text: '浏览器', link: '/bases/browser/' },
     ],
   },
   {
     text: '框架',
     items: [
-      { text: 'Vue', link: '/framework/vue/' },
-      { text: 'React', link: '/framework/react/' },
+      { text: 'Vue', link: '/frameworks/vue/' },
+      { text: 'React', link: '/frameworks/react/' },
     ],
   },
   {
@@ -26,13 +26,14 @@ export const navbar = defineNavbarConfig([
   {
     text: '工具',
     items: [
-      { text: 'Webpack', link: '/toolchain/webpack/' },
-      { text: 'Git', link: '/toolchain/git/' },
+      { text: 'Webpack', link: '/tools/webpack/' },
+      { text: 'Vite', link: '/tools/vite/' },
+      { text: 'Git', link: '/tools/git/' },
     ],
   },
   {
     text: '算法',
-    link: '/algorithm/',
+    link: '/algorithms/',
   },
   {
     text: '性能',

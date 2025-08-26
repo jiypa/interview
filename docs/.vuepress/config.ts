@@ -19,33 +19,34 @@ export default defineUserConfig({
 
   theme: plumeTheme({
     sidebar: {
-      '/basis/': [{
+      '/bases/': [{
         text: '基础',
         items: [
-          '/basis/html/README.md',
-          '/basis/css/README.md',
-          '/basis/javascript/README.md',
-          '/basis/typescript/README.md',
-          '/basis/nodejs/README.md',
-          '/basis/browser/README.md',
+          '/bases/html/README.md',
+          '/bases/css/README.md',
+          '/bases/javascript/README.md',
+          '/bases/typescript/README.md',
+          '/bases/nodejs/README.md',
+          '/bases/browser/README.md',
         ],
       }],
-      '/framework/': [{
+      '/frameworks/': [{
         text: '框架',
         items: [
-          '/framework/vue/README.md',
-          '/framework/react/README.md',
+          '/frameworks/vue/README.md',
+          '/frameworks/react/README.md',
         ],
       }],
       '/network/': [{}],
-      '/toolchain/': [{
+      '/tools/': [{
         text: '工具',
         items: [
-          '/toolchain/webpack/README.md',
-          '/toolchain/git/README.md',
+          '/tools/webpack/README.md',
+          '/tools/vite/README.md',
+          '/tools/git/README.md',
         ],
       }],
-      '/algorithm/': [{}],
+      '/algorithms/': [{}],
       '/performance/': [{}],
     },
 
